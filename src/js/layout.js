@@ -7,8 +7,12 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
+
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import PlanetInfo from "./views/planetinfo";
+import PeopleInfo from "./views/peopleinfo";
+import VehiclesInfo from "./views/vehiclesinfo";
 
 //create your first component
 const Layout = () => {
@@ -30,6 +34,15 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
+						</Route>
+						<Route exact path="/planets/:uniqueid">
+							<PlanetInfo />
+						</Route>
+						<Route exact path="/people/:uniqueid">
+							<PeopleInfo />
+						</Route>
+						<Route exact path="/vehicles/:uniqueid">
+							<VehiclesInfo />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
