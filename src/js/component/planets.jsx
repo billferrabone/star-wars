@@ -3,6 +3,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import { Link } from "react-router-dom";
 
 
+
 function Planets ( {planetName, planetUrl, planetImage}) {
     return <>
     <div className="card m-2 text-start bg-light text-dark" style={{width: '15rem'}}>

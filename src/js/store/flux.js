@@ -46,7 +46,9 @@ const getState = ({ getStore, // Se usa para obtener info de la store en el cont
 				setStore({ demo: demo });
 			},
 			addFavorites: (param) => {
-				setStore({favorites: favorites.concat(param)})
+				const store = getStore();
+				const favoritos = store.favorites.concat(param);
+				setStore({favorites: favoritos});
 			},
 			fetchPeople: () => {
 				fetch("https://www.swapi.tech/api/people/")
