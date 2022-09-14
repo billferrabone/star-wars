@@ -49,7 +49,15 @@ const getState = ({ getStore, // Se usa para obtener info de la store en el cont
 				const store = getStore();
 				const favoritos = store.favorites.concat(param);
 				setStore({favorites: favoritos});
+				
 			},
+
+			deleteFavorites: (borrado) => {
+				const store = getStore();
+				let newFav = store.favorites.filter( (item) => item !== borrado) 
+				setStore({favorites: newFav});
+			},
+
 			fetchPeople: () => {
 				fetch("https://www.swapi.tech/api/people/")
 				.then((response) => response.json()) //lo transformamos en un json
