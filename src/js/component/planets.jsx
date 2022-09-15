@@ -17,7 +17,7 @@ function Planets ( {planetName, planetUrl, planetImage}) {
 
 
     <Link to={`/planets/${planetImage}`}><button className="btn btn-outline-primary float-start">Learn more!</button></Link>
-    <button onClick={() => {actions.addFavorites(planetName);}} href="#" className="btn btn-outline-primary float-end"><i className="fa fa-heart text-danger" /></button>
+    <button onClick={() => {actions.addFavorites(planetName);}} href="#" className="btn btn-outline-primary float-end"><i className="fa fa-heart text-danger" />F</button>
   </div>
 </div>
     </>

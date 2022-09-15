@@ -3,3 +3,7 @@ body {
     margin: 0 auto;
     background-color: white;
 }
+
+.dropdown-menu[data-bs-popper] {
+    left: 90%;
+}

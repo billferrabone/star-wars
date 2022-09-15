@@ -16,14 +16,14 @@ export const Navbar = () => {
 			<div className="ml-auto">
 				{/* <Link to="/demo"> */}
 				<button
-            className="btn btn-secondary dropdown-toggle"type="button"id="dropdownMenuButton1"data-bs-toggle="dropdown"aria-expanded="false">Favorites</button>
+            className="btn btn-secondary dropdown-toggle float-end"type="button"id="dropdownMenuButton1"data-bs-toggle="dropdown"aria-expanded="false">Favorites</button>
 				<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 					{store.favorites.map((favorito, index) => {
 						return (
 							<li key={index}>{favorito}
 							<button onClick={ ()=> {
 								actions.deleteFavorites(favorito);
-							}}>X</button>
+							}}>   X</button>
 							</li>
 						);
 					}

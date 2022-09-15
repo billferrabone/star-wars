@@ -17,7 +17,7 @@ function Character ({peopleName, peopleImage}) {
     <h5 className="card-title">{peopleName}</h5>
     
     <Link to={`/people/${peopleImage}`}><button className="btn btn-outline-primary float-start">Learn more!</button></Link>
-    <button onClick={() => {actions.addFavorites(peopleName);}} href="#" className="btn btn-outline-primary float-end"><i className="bi bi-heart text-danger" /></button>
+    <button onClick={() => {actions.addFavorites(peopleName);}} href="#" className="btn btn-outline-primary float-end"><i className="fa-solid fa-heart"></i>F</button>
     {console.log(store.favorites[0])}
     </div>
 </div>

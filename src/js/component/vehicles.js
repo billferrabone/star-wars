@@ -15,7 +15,7 @@ function Vehicles ( {vehicleName, vehicleUrl, vehicleImage}) {
     <h5 className="card-title">{vehicleName}</h5>
 
     <Link to={`/vehicles/${vehicleImage}`}><button className="btn btn-outline-primary float-start">Learn more!</button></Link>
-    <button onClick={() => {actions.addFavorites(vehicleName);}} href="#" className="btn btn-outline-primary float-end"><i className="fa fa-heart text-danger" /></button>
+    <button onClick={() => {actions.addFavorites(vehicleName);}} href="#" className="btn btn-outline-primary float-end"><i className="fa fa-heart text-danger" />F</button>
   </div>
 </div>
     </>
