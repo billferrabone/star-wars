@@ -7,6 +7,11 @@ import { element } from "prop-types";
 export const Navbar = () => {
 
 	const {store, actions} = useContext(Context);
+	const numeroFavoritos = store.favorites.length;
+	// const numeroFavoritos = favoritos.length;
+
+	console.log("este es el numero de favoritos");
+	console.log(numeroFavoritos);
 
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
@@ -16,14 +21,14 @@ export const Navbar = () => {
 			<div className="ml-auto">
 				{/* <Link to="/demo"> */}
 				<button
-            className="btn btn-secondary dropdown-toggle float-end"type="button"id="dropdownMenuButton1"data-bs-toggle="dropdown"aria-expanded="false">Favorites</button>
+            className="btn btn-secondary dropdown-toggle float-end"type="button"id="dropdownMenuButton1"data-bs-toggle="dropdown"aria-expanded="false">Favorites {numeroFavoritos}</button>
 				<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 					{store.favorites.map((favorito, index) => {
 						return (
 							<li key={index}>{favorito}
-							<button onClick={ ()=> {
+							<a onClick={ ()=> {
 								actions.deleteFavorites(favorito);
-							}}>   X</button>
+							}}><i className="fa fa-trash text-dark" /></a>
 							</li>
 						);
 					}
